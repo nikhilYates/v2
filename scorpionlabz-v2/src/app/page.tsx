@@ -31,8 +31,7 @@ export default function Home() {
         >
           <source src="/assets/video/landing-hero-background.mp4" type="video/mp4" />
         </video>
-        <Image src="/assets/image/labz_2.png" alt="logo" width={200} height={200} />
-        change is coming soon
+        <Image src="/assets/image/labz_2.png" alt="logo" width={400} height={400} />
       </div>  
       {/* <About />
       <Clients />
