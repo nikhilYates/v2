@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import Layout from "../layouts/Layout";
-import  About from "./about/page";
-import Clients from "./clients/page";
-import Contact from "./contact/page";
-import Direction from "./direction/page";
-import Work from "./work/page";
+// import About from "./about/page";
+// import Clients from "./clients/page";
+// import Contact from "./contact/page";
+// import Direction from "./direction/page";
+// import Work from "./work/page";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
