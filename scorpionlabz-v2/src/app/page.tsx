@@ -20,14 +20,14 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="h-full w-full flex flex-col p-8 relative justify-center items-center">
+      <div className="h-full w-full flex flex-col p-8 relative justify-center items-center overflow-hidden">
         <video
           ref={videoRef}
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover -z-10"
+          className="absolute inset-0 w-full h-full object-cover -z-10 scale-110"
         >
           <source src="/assets/video/landing-hero-background.mp4" type="video/mp4" />
         </video>
