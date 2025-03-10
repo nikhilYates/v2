@@ -32,13 +32,13 @@ export default function Home() {
           <source src="/assets/video/landing-hero-background.mp4" type="video/mp4" />
         </video>
         <Image src="/assets/image/labz_2.png" alt="logo" width={200} height={200} />
-        web solutions for the bold
+        change is coming soon
       </div>  
-      <About />
+      {/* <About />
       <Clients />
       <Contact />
       <Direction />
-      <Work />
+      <Work /> */}
     </Layout>
   );
 }
