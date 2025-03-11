@@ -5,7 +5,7 @@ import Layout from "../layouts/Layout";
 // import About from "./about/page";
 // import Clients from "./clients/page";
 // import Contact from "./contact/page";
-// import Direction from "./direction/page";
+import Direction from "./direction/page";
 // import Work from "./work/page";
 import { useEffect, useRef } from "react";
 
@@ -33,10 +33,10 @@ export default function Home() {
         </video>
         <Image src="/assets/image/labz_2.png" alt="logo" width={400} height={400} />
       </div>  
+      <Direction />
       {/* <About />
       <Clients />
       <Contact />
-      <Direction />
       <Work /> */}
     </Layout>
   );
