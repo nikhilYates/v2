@@ -8,7 +8,8 @@ import Layout from "../layouts/Layout";
 // import Direction from "./direction/page";
 // import Work from "./work/page";
 import { useEffect, useRef } from "react";
-
+import Navbar from "@/components/Navbar";
+import Blob from "@/components/Blob";
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
@@ -20,7 +21,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="h-full w-full flex flex-col p-8 relative justify-center items-center overflow-hidden">
+      <div className="h-full w-full flex flex-col p-24 relative justify-top overflow-hidden">
         <video
           ref={videoRef}
           autoPlay
@@ -31,7 +32,10 @@ export default function Home() {
         >
           <source src="/assets/video/landing-hero-background.mp4" type="video/mp4" />
         </video>
-        <Image src="/assets/image/labz_2.png" alt="logo" width={400} height={400} />
+        <Navbar />
+        <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center -z-0">
+          <Blob />
+        </div>
       </div>  
       {/* <About />
       <Clients />
