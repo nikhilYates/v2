@@ -6,7 +6,7 @@ import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 
-const Blob = () => {
+const MobileBlob = () => {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -21,8 +21,9 @@ const Blob = () => {
     const scene = new THREE.Scene();
     // scene.background = new THREE.Color("#050924"); // Dark blue background
     
-    // Calculate desired blob height (35% of container height)
-    const maxBlobHeightRatio = 0.35;
+    // Calculate desired blob height and position
+    const maxBlobHeightRatio = 0.30;
+    const topOffset = 0.8; // Changed from -1.4 to 1.0 to move it up
     const desiredBlobHeight = height * maxBlobHeightRatio;
     
     // Adjust camera position and FOV to accommodate the desired size
@@ -203,8 +204,9 @@ const Blob = () => {
     // Apply the calculated scale
     blob.scale.set(blobScale, blobScale, blobScale);
     
-    // Position the blob on the right side (adjust x position based on scale)
-    blob.position.x = 3.0 * blobScale;
+    // Position the blob
+    blob.position.x = 0; // Center horizontally
+    blob.position.y = topOffset; // Position from top
 
     scene.add(blob);
 
@@ -217,11 +219,12 @@ const Blob = () => {
       material.uniforms.u_time.value = time;
       material.uniforms.uTime.value = time;
 
-      // Scale the movement amplitude by the blob scale
-      blob.position.x = 3.0 * blobScale + Math.sin(time * 0.3) * 0.2 * blobScale;
-      blob.position.y = Math.cos(time * 0.2) * 0.2 * blobScale;
+      // Gentle horizontal movement around center
+      blob.position.x = Math.sin(time * 0.3) * 0.2 * blobScale;
+      // Subtle vertical movement around top position
+      blob.position.y = topOffset + Math.cos(time * 0.2) * 0.1 * blobScale;
       
-      // Add the scale factor to the base scale for animations
+      // Scale animations
       blob.scale.x = blobScale * (1 + Math.sin(time * 0.5) * 0.2);
       blob.scale.y = blobScale * (1 + Math.cos(time * 0.4) * 0.2);
       blob.scale.z = blobScale * (1 + Math.sin(time * 0.3) * 0.2);
@@ -230,7 +233,7 @@ const Blob = () => {
     };
     animate();
 
-    // Update resize handler to maintain relative size
+    // Update resize handler
     const handleResize = () => {
       if (!container) return;
       
@@ -241,9 +244,10 @@ const Blob = () => {
       camera.aspect = newWidth / newHeight;
       camera.updateProjectionMatrix();
       
-      // Update blob scale
+      // Update blob scale and position
       blob.scale.set(newBlobScale, newBlobScale, newBlobScale);
-      blob.position.x = 3.0 * newBlobScale;
+      blob.position.x = 0;
+      blob.position.y = topOffset;
       
       renderer.setSize(newWidth, newHeight);
       composer.setSize(newWidth, newHeight);
@@ -261,4 +265,4 @@ const Blob = () => {
   return <div ref={mountRef} className="w-full h-full bg-[#050924]"></div>;
 };
 
-export default Blob;
+export default MobileBlob;
