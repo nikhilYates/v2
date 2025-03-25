@@ -1,0 +1,24 @@
+{
+  "directions": [
+    {
+      "id": 1,
+      "title": "The Great Wealth Transfer",
+      "description": "‘The Great Wealth Transfer’ is putting a new generation in charge of many businesses, and speeding up the push for modern tech adoption. Over the next 20 years, baby boomers will pass an estimated $84 trillion in assets to their children and grandchildren - including small businesses. This transfer serves as a catalyst for tech modernization, with younger decision makers and leaders leveraging tech to streamline operations and stay competitive. Technology adoption is no longer optional - it has become a strategic necessity."
+    },
+    {
+      "id": 2,
+      "title": "Startup-Driven Digital Disruption",
+      "description": "Supporting innovative startups in revolutionizing traditional industries through cutting-edge technology solutions that challenge conventional business models and create new market opportunities."
+    },
+    {
+      "id": 3, 
+      "title": "Cross-Vertical Optimization",
+      "description": "Implementing intelligent solutions that break down silos between industry verticals, enabling businesses to leverage synergies and create more efficient, integrated operations across their entire value chain."
+    },
+    {
+      "id": 4,
+      "title": "Digitization in Offline Industries",
+      "description": "Transforming conventional offline businesses through strategic digital integration, helping traditional industries adapt and thrive in an increasingly connected world while maintaining their core values."
+    }
+  ]
+}
