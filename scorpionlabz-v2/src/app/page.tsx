@@ -51,14 +51,14 @@ export default function Home() {
           <source src="/assets/video/landing-hero-background.mp4" type="video/mp4" />
         </video> */}
         <Navbar />
-        <div className="absolute top-0 w-full h-full flex items-start justify-center z-0">
+        {/* <div className="absolute top-0 w-full h-full flex items-start justify-center z-0">
           {!showMobileBlob ? <Blob /> : <MobileBlob />}
-        </div>
+        </div> */}
         {/* <div className="hidden xl:flex absolute top-0 xl:left-0 w-full h-full items-center justify-center -z-10">
           <Blob />
         </div> */}
         <div className="p-8 xl:p-32 flex flex-col gap-4 z-10">
-          <h1 className="text-6xl xl:text-7xl 2xl:text-9xl font-extralight text-white">Modern Solutions for <br /> Modern Businesses</h1>
+          <h1 className="text-6xl xl:text-6xl 2xl:text-8xl font-extralight text-white">Modern Solutions for <br /> Modern Businesses</h1>
           <p className="text-white text-xl font-light w-full xl:w-1/2 2xl:w-1/3 2xl:text-2xl">Experience a software solutions house that focuses on delivering you <span className="font-bold"> cutting edge, sustainable</span> solutions.</p>
           <div className="flex flex-row justify-start align-middle pt-8 gap-4">
             <Button variant={'outline'} className="w-fit font-semibold">
