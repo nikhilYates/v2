@@ -15,9 +15,9 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "ScorpionLabz",
-  description: "Coming Soon...",
+  description: "",
   icons: {
-    icon: "/sl_white.png",
+    icon: "/assets/image/whiteScorp_full.png",
   },
 };
 
