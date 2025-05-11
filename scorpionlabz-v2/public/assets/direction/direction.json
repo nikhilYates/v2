@@ -1,0 +1,24 @@
+{
+  "directions": [
+    {
+      "id": 1,
+      "title": "The Great Wealth Transfer",
+      "description": "Over the next 20 years, $84 trillion will shift from baby boomers to their heirs—many inheriting small businesses. For younger leaders, technology isn’t optional; it’s a strategic necessity to streamline operations and stay competitive."
+    },
+    {
+      "id": 2,
+      "title": "Startup-Driven Digital Disruption",
+      "description": "Supporting innovative startups in revolutionizing traditional industries through cutting-edge technology solutions that challenge conventional business models and create new market opportunities."
+    },
+    {
+      "id": 3, 
+      "title": "Cross-Vertical Optimization",
+      "description": "Implementing intelligent solutions that break down silos between industry verticals, enabling businesses to leverage synergies and create more efficient, integrated operations across their entire value chain."
+    },
+    {
+      "id": 4,
+      "title": "Digitization in Offline Industries",
+      "description": "Transforming conventional offline businesses through strategic digital integration, helping traditional industries adapt and thrive in an increasingly connected world while maintaining their core values."
+    }
+  ]
+}
