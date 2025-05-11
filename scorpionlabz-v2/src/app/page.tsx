@@ -52,9 +52,9 @@ export default function Home() {
           <source src="/assets/video/landing-hero-background.mp4" type="video/mp4" />
         </video> */}
         <Navbar />
-        {/* <div className="absolute top-0 w-full h-full flex items-start justify-center z-0">
+        <div className="absolute top-0 w-full h-full flex items-start justify-center z-0">
           {!showMobileBlob ? <Blob /> : <MobileBlob />}
-        </div> */}
+        </div>
         {/* <div className="hidden xl:flex absolute top-0 xl:left-0 w-full h-full items-center justify-center -z-10">
           <Blob />
         </div> */}
@@ -81,11 +81,11 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-full h-[20vh] xl:h-[50vh] bg-gradient-to-t from-black to-transparent pointer-events-none -z-5"></div>
       </div>  
       <Direction />
-      <About />
+      {/* <About /> */}
       <Services />
       <Clients />
-      <Contact />
-      <Work />
+      {/* <Contact /> */}
+      {/* <Work /> */}
     </Layout>
   );
 }
