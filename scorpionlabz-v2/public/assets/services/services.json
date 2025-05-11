@@ -1,0 +1,17 @@
+{
+    "services" : [
+        {
+            "title": "Website Design",
+            "subtitle": "Your website is Your Virtual Storefront. Make it Pop.",
+            "description": "Web design is not trivial. We have a method to our madness. Each site is carefully crafted and maintained. Thinking about the future is important - whether you're expanding, planning on selling more, or looking to upgrade. Thats why our modular, objective-oriented approach to our work is so effective.",
+            "icon": "design"
+
+        },
+        {
+            "title": "Development Solutions",
+            "subtitle": "Robust, Scalable, and High-Performaing Software Engineering.",
+            "description": "'Anyone can build a website.' 'Anyone can build a SaaS product.' Duh. We offer modern, tailored solutions that enhance your digital presence within your niche - and scale your outreach.",
+            "icon": "build"
+        }
+    ]
+}
