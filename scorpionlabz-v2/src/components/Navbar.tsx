@@ -3,6 +3,25 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
+export const handleScroll = (link: string) => {
+  const navbarHeight = 80; // Approximate height of navbar in pixels
+
+  if (link === 'home') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      return;
+  }
+  const element = document.getElementById(link);
+  if (element) {
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+    
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+};
+
 export default function Navbar() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,11 +80,12 @@ export default function Navbar() {
         }}
       >
         <Image 
+          onClick={() => handleScroll('home')}
           src="/assets/image/labz_2.png" 
           alt="logo" 
           width={75} 
           height={75} 
-          className="transition-all duration-300 ease-in-out"
+          className="transition-all duration-300 ease-in-out opacity-80 hover:opacity-100 hover:cursor-pointer"
         />
         
         {/* Mobile burger menu button */}
@@ -91,11 +111,12 @@ export default function Navbar() {
 
         {/* Desktop menu */}
         <div className="hidden md:flex flex-row gap-8 justify-start align-top transition-all duration-300 ease-in-out border-white rounded-xl">
-          <p className="text-white text-lg font-light">Direction</p>
-          <p className="text-white text-lg font-light">About</p>
-          <p className="text-white text-lg font-light">Work</p>
-          <p className="text-white text-lg font-light">Services</p>
-          <p className="text-white text-lg font-light">Contact</p>
+          <p onClick={() => handleScroll('direction')} className="text-white/60 hover:text-white transition-colors text-lg font-light hover:cursor-pointer">Direction</p>
+          <p onClick={() => handleScroll('clients')} className="text-white/60 hover:text-white transition-colors text-lg font-light hover:cursor-pointer">Clients</p>
+          {/* <p className="text-white text-lg font-light">About</p> */}
+          {/* <p className="text-white text-lg font-light">Work</p> */}
+          <p onClick={() => handleScroll('services')} className="text-white/60 hover:text-white transition-colors text-lg font-light hover:cursor-pointer">Services</p>
+          {/* <p className="text-white text-lg font-light">Contact</p> */}
         </div>
       </div>
     </div>

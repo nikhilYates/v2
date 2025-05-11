@@ -29,8 +29,9 @@ const Blob = () => {
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     camera.position.z = 3;
     
-    // Calculate scale factor to achieve desired height
-    const blobScale = (desiredBlobHeight / height) * 2; // multiply by 2 because Three.js units are in relation to viewport height
+    // Calculate scale factor to achieve desired height, with a maximum size limit
+    const maxScale = 1.5; // Maximum scale factor
+    const blobScale = Math.min((desiredBlobHeight / height) * 2, maxScale);
 
     const renderer = new THREE.WebGLRenderer({ 
       alpha: false,
@@ -203,8 +204,9 @@ const Blob = () => {
     // Apply the calculated scale
     blob.scale.set(blobScale, blobScale, blobScale);
     
-    // Position the blob on the right side (adjust x position based on scale)
-    blob.position.x = 3.0 * blobScale;
+    // Position the blob on the right side (adjust x position based on scale and screen width)
+    const xOffset = Math.min(3.0 * blobScale, width * 0.3); // Limit x position based on screen width
+    blob.position.x = xOffset;
 
     scene.add(blob);
 
@@ -236,14 +238,15 @@ const Blob = () => {
       
       const newWidth = container.clientWidth;
       const newHeight = container.clientHeight;
-      const newBlobScale = (newHeight * maxBlobHeightRatio / newHeight) * 2;
+      const newBlobScale = Math.min((newHeight * maxBlobHeightRatio / newHeight) * 2, maxScale);
+      const newXOffset = Math.min(3.0 * newBlobScale, newWidth * 0.3);
       
       camera.aspect = newWidth / newHeight;
       camera.updateProjectionMatrix();
       
-      // Update blob scale
+      // Update blob scale and position
       blob.scale.set(newBlobScale, newBlobScale, newBlobScale);
-      blob.position.x = 3.0 * newBlobScale;
+      blob.position.x = newXOffset;
       
       renderer.setSize(newWidth, newHeight);
       composer.setSize(newWidth, newHeight);
