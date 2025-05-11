@@ -15,9 +15,27 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "ScorpionLabz",
-  description: "",
+  description: "ScorpionLabz - Innovative Technology Solutions",
   icons: {
     icon: "/assets/image/whiteScorp_full.png",
+  },
+  openGraph: {
+    title: "ScorpionLabz",
+    description: "ScorpionLabz - Innovative Technology Solutions",
+    images: [
+      {
+        url: "/assets/image/whiteScorp_full.png",
+        width: 1200,
+        height: 630,
+        alt: "ScorpionLabz Logo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ScorpionLabz",
+    description: "ScorpionLabz - Innovative Technology Solutions",
+    images: ["/assets/image/whiteScorp_full.png"],
   },
 };
 
