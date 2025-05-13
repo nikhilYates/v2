@@ -12,7 +12,7 @@ export default function Direction() {
           Our Direction
         </h1>
         <p className="text-white text-xl font-medium text-center w-full 2xl:w-1/2 relative z-10">
-          Motivated by the need to create a more sustainable future, we are a software solutions house that focuses on delivering you cutting edge, sustainable solutions.
+          Motivated by the need to create a more sustainable future, we are a software solutions house that focuses on delivering tailored, cutting edge solutions to help you grow your business.
         </p>
       </div>
         <div className="w-full flex flex-col justify-start items-center">
